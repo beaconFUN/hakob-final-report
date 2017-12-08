@@ -10,3 +10,6 @@ docker pull sititou70/platex
 元の導入に関しては  
 https://sititou70.github.io/?e=memo20170703
 
+## common について
+mid-report-commonを各自DLしてcommonというフォルダを作成しその中に保存しておいてください  
+https://github.com/beaconFUN/mid-report-common
