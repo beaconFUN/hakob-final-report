@@ -1,129 +1,138 @@
-\documentclass[a4,12pt]{jarticle}
+% プロジェクト学習中間報告書書式テンプレート ver.1.0 (iso-2022-jp)
 
-\usepackage{ascmac}
+% 両面印刷する場合は `openany' を削除する
+\documentclass[openany,11pt,papersize]{jsbook}
+  
+  % 報告書提出用スタイルファイル
+  %\usepackage[final]{funpro}%最終報告書
+  \usepackage[middle]{funpro}%中間報告書
+  
+  % 画像ファイル (EPS, EPDF, PNG) を読み込むために
+  \usepackage[dvipdfmx]{graphicx,color}
+  
+  % ファイル分割のためのパッケージ
+  \usepackage{subfiles}
+  
+  % ここから -->
+  \usepackage{calc,ifthen}
+  \newcounter{hoge}
+  \newcommand{\fake}[1]{\whiledo{\thehoge<70}{#1\stepcounter{hoge}}%
+    \setcounter{hoge}{0}}
+  % <-- ここまで 削除してもよい
+  
+  % 年度の指定
+  \thisYear{2017}
+  
+  % プロジェクト名
+  \jProjectName{ビーコンIoTで函館のまちをハックする}
+  
+  % [簡易版のプロジェクト名]{正式なプロジェクト名}
+  % 欧文のプロジェクト名が極端に長い（2行を超える）場合は、短い記述を
+  % 任意引数として渡す。
+  %\eProjectName[Making Delicious curry]{How to make delicious curry of Hakodate}
+  \eProjectName{Leverage the Beacon IoT in Hakodate Real Downtown for Our Smarter Life}
+  
+  
+  % <プロジェクト番号>-<グループ名>
+  \ProjectNumber{8-A}
+  
+  % グループ名
+  \jGroupName{Hako-B}
+  \eGroupName{Hako-B}
+  
+  % プロジェクトリーダ
+  \ProjectLeader{1015253}{橋場保鷹}{Hodaka~Hashiba}
+  
+  % グループリーダ
+  \GroupLeader  {1015053}{佐藤秀輔}{Shusuke~Sato}
+  
+  % メンバー数
+  \SumOfMembers{4}
+  % グループメンバ
+  \GroupMember  {1}{1015157}{小笠原瑠奈}{Runa~Ogasawara}
+  \GroupMember  {2}{1015050}{北原康太}{Kota~Kitahara}
+  \GroupMember  {3}{1015204}{小島雄士}{Yuji~Kojima}
+  \GroupMember  {4}{1015053}{佐藤秀輔}{Shusuke~Sato}
+  
+  % 指導教員
+  \jadvisor{松原克弥,藤野雄一,鈴木恵二,奥野拓}
+  % 複数人数いる場合はカンマ(,)で区切る。カンマの前後に空白は入れない。
+  \eadvisor{Katsuya~Matsubara,Yuichi~Fujino,Keiji~Suzuki,Taku~Okuno}
+  
+  % 論文提出日
+  \jdate{2017年7月26日}
+  \edate{July~26, 2017}
+  
+  \begin{document}
+  %
+  % 表紙
+  \maketitle
+  
+  %前付け
+  \frontmatter
+  
+  % 和文概要
+  \begin{jabstract}
+  
+  % プロジェクト全体の日本語概要
+  \subfile{common/common-jabstract}
+  
+  % プロジェクト全体の日本語概要
+  
+  % 和文キーワード
 
-\setlength{\topmargin}{-5mm}
-\setlength{\textheight}{25cm}
+  
+  %英語の概要
+  \begin{eabstract}
+  
+  % プロジェクト全体の英語概要
+  \subfile{common/common-eabstract}
+  
+  % グループの英語概要
+  
+  % 英文キーワード
 
-\setlength{\oddsidemargin}{-10mm}
-\setlength{\textwidth}{175mm}
+  
+  \tableofcontents% 目次
+  
+  
+  \mainmatter% 本文のはじまり
+  
+  % プロジェクト共通の項目
+  \subfile{common/common-chapters}
+  
+  
+  
+  % グループごとの項目
+  
+  \chapter{本グループについて}
 
-\markright{\large システム情報科学実習 発表評価シート Presentation Evaluation Sheet}
-\renewcommand\thepage{}
-\pagestyle{myheadings}
 
-\begin{document}
-\begin{description}
-\item{●} 評価対象のプロジェクト名 Project Title \\
-%ここは変更してください
-ビーコンIoTで函館のまちをハックする \ \ Leverage the Beacon IoT in Hakodate Real Downtown for Our Smarter Life
-\item{●} 評価者 {\footnotesize （プロジェクト学習履修者は必ず記入してください．
-それ以外の方は，よろしければご記入ください）}
-\begin{description}
-\item{} \underline{学生・教員・職員・一般}{\footnotesize (○で囲んでください) }
-\item{} 学生　　→　\underline{学年\hspace{2cm} 学籍番号\hspace{3cm} 氏名\hspace{5cm}}
-\item{} 　　　　　　Affiliate\hspace{62mm} Name\hspace{5cm} \vspace*{-3mm}
-\item{} その他　→　\underline{所属\hspace{67.5mm} 氏名\hspace{5cm}}
-\end{description}
-
-\item{●} \underline{発表技術}について
-{\footnotesize ( 基準：プロジェクトの内容を伝えるために，効果的な発表が行われているか )}
-\vspace*{-4mm}
-\item{　} about \underline{Presentation Skill}
-{\footnotesize ( - Does this presentation effectively express the project and its plan? )}
-\begin{description}
-\item{}  Evaluation \hspace{19mm}
-{\footnotesize  Specify integer number range from {\normalsize 1}(VeryPoor)
-to {\normalsize 10}(VeryGood)}
-\vspace*{-3mm}
-\item{}  評価 …［ \hspace{10mm} ］\hspace{5mm}
-{\footnotesize {\normalsize 1} (非常に悪い)から{\normalsize 10} (非常に優秀)までの間で記入してください}
-\vspace{-3mm}
-\end{description}
-
-\begin{itembox}[l]{コメント Comments}
-\vspace*{-3mm} \hfill {\footnotesize
-評価の理由やアドバイスなどを，項目に分けてできるだけ詳細に記入してください
-} \vspace*{-2mm} \\
-\hfill {\footnotesize The reasons for your evaluation, advice and so on}
-\vspace{45mm}
-\end{itembox}
-
-\item{●} \underline{Hako-Bの発表内容}について
-{\footnotesize ( 基準：プロジェクトの目標設定と計画は十分なものであるか )}
-\vspace*{-4mm}
-\item{　} about \underline{Hako-B}
-{\footnotesize ( - Were the specified plans satisfied? )}
-\begin{description}
-\item{}  Evaluation \hspace{19mm}
-{\footnotesize  Specify integer number range from {\normalsize 1}(VeryPoor)
-to {\normalsize 10}(VeryGood)}
-\vspace*{-3mm}
-\item{}  評価 …［ \hspace{10mm} ］\hspace{5mm}
-{\footnotesize {\normalsize 1} (非常に悪い)から{\normalsize 10} (非常に優秀)までの間で記入してください}
-\vspace{-3mm}
-\end{description}
-
-\begin{itembox}[l]{コメント Comments}
-\vspace*{-3mm} \hfill {\footnotesize
-評価の理由やアドバイスなどを，項目に分けてできるだけ詳細に記入してください
-} \vspace*{-2mm} \\
-\hfill {\footnotesize The reasons for your evaluation, advice and so on}
-\vspace{45mm}
-\end{itembox}
-\\ \\ \\
-
-\item{●} \underline{Youbeacommの発表内容}について
-{\footnotesize ( 基準：プロジェクトの目標設定と計画は十分なものであるか )}
-\vspace*{-4mm}
-\item{　} about \underline{Youbeacomm}
-{\footnotesize ( - Were the specified plans satisfied? )}
-\begin{description}
-\item{}  Evaluation \hspace{19mm}
-{\footnotesize  Specify integer number range from {\normalsize 1}(VeryPoor)
-to {\normalsize 10}(VeryGood)}
-\vspace*{-3mm}
-\item{}  評価 …［ \hspace{10mm} ］\hspace{5mm}
-{\footnotesize {\normalsize 1} (非常に悪い)から{\normalsize 10} (非常に優秀)までの間で記入してください}
-\vspace{-3mm}
-\end{description}
-
-\begin{itembox}[l]{コメント Comments}
-\vspace*{-3mm} \hfill {\footnotesize
-外国人利用者として、不便だと思う機能は何ですか？
-} \vspace*{-2mm} \\
-\hfill {\ What functions are inconvenient when do you use this App as foreigner ?}
-\vspace{45mm}
-\end{itembox}
-
-\item{●} \underline{サプライズスナップの発表内容}について
-{\footnotesize ( 基準：プロジェクトの目標設定と計画は十分なものであるか )}
-\vspace*{-4mm}
-\item{　} about \underline{Surprise Snap}
-{\footnotesize ( - Were the specified plans satisfied? )}
-\begin{description}
-\item{}  Evaluation \hspace{19mm}
-{\footnotesize  Specify integer number range from {\normalsize 1}(VeryPoor)
-to {\normalsize 10}(VeryGood)}
-\vspace*{-3mm}
-\item{}  評価 …［ \hspace{10mm} ］\hspace{5mm}
-{\footnotesize {\normalsize 1} (非常に悪い)から{\normalsize 10} (非常に優秀)までの間で記入してください}
-\vspace{-3mm}
-\end{description}
-
-\begin{itembox}[l]{コメント Comments}
-\vspace*{-3mm} \hfill {\footnotesize
-評価の理由やアドバイスなどを，項目に分けてできるだけ詳細に記入してください
-} \vspace*{-2mm} \\
-\hfill {\footnotesize The reasons for your evaluation, advice and so on}
-\vspace{45mm}
-\end{itembox}
-
-\end{description}
-
-\vfill
-
-\hfill 記入が終わったら，評価対象プロジェクトのメンバーに渡してください \\
-\hfill Please hand this sheet to the project members
-\end{document}
-
+  % 以降、付録(付属資料)であることを示す
+  \begin{appendix}
+  
+  \chapter{中間報告会で使用した本グループのポスター}
+  
+  \begin{figure}[thbp]
+    \begin{center}
+      \includegraphics[width=0.92\hsize]{img/poster_v44.pdf}
+      \caption{サプライズスナップポスター（中間報告会）}
+      \label{fig:sup_mid_poster}
+    \end{center}
+  \end{figure}
+  
+  %付録の終わり
+  \end{appendix}
+  
+  
+  %\backmatter
+  
+  \begin{thebibliography}{9}
+    \bibitem{JohoWhitepaper} 総務省, 平成28年版 情報通信白書 第1部 特集 IoT・ビッグデータ・AI～ネットワークとデータが創造する新たな価値～
+    http://www.soumu.go.jp/johotsusintokei/whitepaper/ja/h28/html/nc122530.html
+  
+    [last accessed 2017/7/24]
+  \end{thebibliography}
+  
+  \end{document}
+  
