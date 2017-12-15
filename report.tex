@@ -84,6 +84,12 @@
 そのアイディアなどを下にサービス設計を行い、後期の活動から開発をするための準備を行った。
 7月14日に行われた中間発表会ではビーコンの特性を活かしきれていないのではないかとの指摘もあり、よりビーコンの強みを活かした設計が必要だという課題が見つかった。
 
+後期の活動では前期の中間発表で出てきた問題点をどのように解決するかを話し合うことから始め、開発の方針を固めた。
+グループのメンバー全員で10月末までアプリの開発を行いそこからはポスターの作成を行う班とで分かれて作業を行った。
+11月10日のデモ発表会では自分たちのアプリをプロジェクトの担当教員にポスター付きで発表を行った。
+デモ発表では、ポスター、アプリとともにより修正しなければならない点が多く発見され今後の開発などの目標を固めメンバーでその修正点をどのように修正するのかを話し合い修正、開発を行った。
+最終発表では中間発表、デモ発表で言われた点を修正し、発表を行うことができた。
+
 % 和文キーワード
 \begin{jkeyword}
 ビーコン, フィールドワーク, 函館バス, アプリケーション, 設計
@@ -102,6 +108,12 @@ In this group, we decided to focus on the problem that utilization of Hakodate b
 From that point, we accepted reviews from teachers in charge how to improve the use of the bus by using beacons while consolidating ideas.
 We designed the service based on the idea etc. and prepared for development from the latter term activities.
 In the interim presentation held on July 14th, there was a case that the characteristics of the beacon could not be fully utilized, and a problem was found that it is necessary to design with the advantage of Beacon more.
+
+In the later activities, we began discussing how to solve the problems that appeared in the interim announcement of the previous term and strengthened our development policy.
+All the members of the group worked separately from the team that developed the application until the end of October and created a poster from that.
+At the demonstration presentation on November 10, we presented our own app with a poster to the teacher in charge of the project.
+In the demonstration announcement, many points to be corrected along with the poster and the application were discovered many times, the goals such as future development were consolidated, the discussion and the development were carried out to discuss how to correct the correction point in the member.
+In the final presentation, I was able to correct the points mentioned in the interim announcement, the demo announcement, and make a presentation.
 
 % 英文キーワード
 \begin{ekeyword}
@@ -493,10 +505,18 @@ Hako-bのプロトタイプでは、乗車地までの経路表示、ビーコ�
 
 \bunseki{佐藤秀輔}
 
-\section{今後の展望}
+\section{後期へ向けての展望}
 プロトタイプ作成後、実際のバスとバス停にビーコンを設置するに向けて、フィールドテストをしていきたいと考えている。
 具体的な実験方法はバス車内に設置されたビーコンに見立てて実際のバスにビーコンを持って乗車し、バス停に立っているHako-bアプリ利用者にバス接近情報が通知されるかどうか、またバス停付近にビーコンを持って立ち、どの範囲なら乗車予定のバス停がビーコンによって見つけられるかということを検証していきたい。
 また、バス停の選択の際にバス停名と位置を知っていなければ選択できないという問題がある。その問題の解決のために、バス停の名前を知らなくても選択できる方法、例えば目的の観光地の名前からバス停を推測するような機能を追加していきたい。
+
+\bunseki{北原康太}
+
+\section{今後の展望}
+今後の展望として、GPSを用いたバス遅延時間の計算よりもビーコンを用いて遅延時間の計算をし、より正確な遅延時間の機能の追加をしたい。
+具体的な方法として、１つ前のバス停のビーコンの電波を受け取ったユーザの時間とバスの時刻表の時間のズレをサーバで管理し、リアルタイムで遅延表示を行う。
+また、バスの乗り換えの実装もしたい。
+そして、最終成果発表でいただいた意見より、目的の降車地に着いたバスの通知機能もあると、初めて函館のバスを利用するユーザにとって有益であると分かったため、降車地のPush通知機能も実装したい。
 
 \bunseki{北原康太}
 
@@ -507,9 +527,17 @@ Hako-bのプロトタイプでは、乗車地までの経路表示、ビーコ�
 ビーコンについての学習では、ビーコンの仕組み、種類、またビーコンの活用事例などを調べ、3分間の発表をして、情報を共有した。\\
 次に、フィールドワークのための班を決め、フィールドワーク講習会などを受講した。調査内容を決めるなどの事前準備を行い、フィールドワークへ赴いた。行き先は、四稜郭・五稜郭・西部地区の3つのエリアで、観光客や地元民の行動観察、聞き取り調査、現地の資料の収集などを行い、それらの結果をまとめてプロジェクト全体と結果を共有した。\\
 その後のアイデア出しでは、アイデアソンを行い、自分が考えて良いと思ったアイデアを１つのスライドにまとめて発表を行った。メンバー各自が出したアイデアを基に3グループに分かれ、アイデアを3つずつ出し、Tangerine株式会社やトランスコスモス株式会社に対して発表を行いレビューをいただいた。
+
 \bunseki{北原康太}
 
-\section{学び}
+\section{後期の振り返り}
+後期の活動では、中間発表でいただいた意見を元に不十分だった点を洗い出し、サービスの見直しをした。
+特に、「誰を対象にしたアプリなのか」が明確になっていなかったため、函館のバスを初めて利用する観光客を対象とし、アプリの開発へと進んだ。
+11月に行われたアプリのデモ発表会では、レビューをしていただいた先生方から、「なぜビーコンを用いると良いのか」ということを強調するべきだという意見をいただいたので、グループメンバーと話し合い最終成果発表に向けて、ポスター作成と発表練習を行った。
+
+\bunseki{北原康太}
+
+\section{前期の活動での学び}
 \subsection{ビーコンについて}
 メンバーの大半がビーコンについてほとんど何も知らなかったため、ビーコン勉強会を開いて、現在のビーコンの活用事例やビーコンでできることとできないことについての情報を共有した。
 また、ビーコンを取り扱っているTangerine株式会社とトランスコスモス株式会社からプロジェクトメンバーが考えたアイデアについてのレビューをいただき、よりビーコンについての知識を深めた。
@@ -522,6 +550,38 @@ Hako-bのプロトタイプでは、乗車地までの経路表示、ビーコ�
 また、Tangerine株式会社とトランスコスモス株式会社に向けて、それぞれのグループで考えたアイデアをプレゼンテーションをした際に、起承転結の構成を強く意識した発表資料を作り、分かりやすいプレゼンテーションになるように心がけた。
 
 \bunseki{北原康太}
+
+\section{後期の活動での学び}
+\subsection{チーム開発}
+グループメンバーのほとんどがチーム開発をするのが初めてだったため、グループリーダーを中心に適宜、ソースコードのバグや他人が見てもわかりやすい変数名をつけるなど意識して開発を行った。
+また、ソースコードを一括管理するツールとして「SourceTree」を利用してGithubのリポジトリの操作を円滑化して作業効率を高めることができた。
+
+\bunseki{北原康太}
+
+\subsection{iOSプログラミング}
+グループリーダーを除いてiosプログラミングの経験がなかったため、各自、夏休みなどを利用し、簡単なiPhoneアプリを作成して、学習を進めた。
+開発環境である「Xcode」にはiPhoneアプリ画面の遷移や見た目の操作など、UIを考慮しなければならないことも多々あったため、コードの量や画面数が増えるにつれて、理解しづらくならないように、逐一コメントを残すことを心がけた。
+
+\bunseki{北原康太}
+
+\section{個人の振り返り}
+\subsection{北原康太}
+新規プロジェクトということで実際に函館の街に赴き、観光客の方や地元の方などに聞き取り調査を行い函館の街の不満点や問題点を見つけるというところから、このプロジェクトはスタートした。
+問題点からその解決策を見出す難しさを身にしみて感じた。特に、前期に行った「アイデアソン」や「アイデアコンテスト」で短い時間でいくつものアイデアを紙に書き出し、創出した経験は、今後の学生生活や実際の業務に携わった時にも役に立つ手段だと思う。
+そして、チーム開発においては、今まで扱ったことのない「Swift」を使用して、バス停関係の開発を担当できた。
+チーム開発は、お互いにコミュニケーションをとって相手の開発担当部分を理解するという学習が大いに自分のためになった。
+人のソースコードを読んで理解しやすい点・しにくい点を参考にして自分のコードを見直すきっかけになれたこと、ユーザの求める機能がなんであるかをメンバーと考えて開発に携われたことがチーム開発から得られた経験である。
+
+\bunseki{北原康太}
+
+\subsection{佐藤秀輔}
+今回のプロジェクトでは函館という一つの地域に目を当ててどこに問題があり、その問題をどのようにビーコンを用いて解決をするのかということを考えるというところが初めての経験だった。
+私は、このグループAのグループリーダーとして活動していたが、メンバーをまとめ、メンバーごとに指示を出したりするということがかなり難しいと感じた。
+活動の中でグループのメンバーへの指示が遅くなったり、あまり指示を詳しく出すことができていなくメンバーの作業が止まってしまうことがあり、その部分を改善しなければいけないと感じた。
+開発に関しては、今回のiOSアプリの開発で自分しか開発の経験がなかったためメンバーがアプリ開発の基礎知識をつけられるように、Swiftの資料などを作成するということをした。
+今回のプロジェクト学習を通して、リーダーとしてどのようにメンバーに指示を出していくのか、iOSアプリでのビーコンの扱いの仕方などを学ぶことができ良い経験を得ることができた。
+
+\bunseki{佐藤秀輔}
 
 
   % 以降、付録(付属資料)であることを示す
@@ -543,7 +603,13 @@ Hako-bのプロトタイプでは、乗車地までの経路表示、ビーコ�
   \end{center}
 \end{figure}
 
-  \chapter{最終成果報告会で使用した本グループのポスター}
+\chapter{最終発表ポスター}
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[clip,width=14cm]{img/final_poster.png}
+    \label{fig:poster}
+  \end{center}
+\end{figure}
   
   %付録の終わり
   \end{appendix}
