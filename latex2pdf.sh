@@ -8,3 +8,5 @@ rm ${fileName}.synctex.gz
 rm ${fileName}.log
 rm ${fileName}.bbl
 rm ${fileName}.blg
+
+mv report.pdf document08_A.pdf
