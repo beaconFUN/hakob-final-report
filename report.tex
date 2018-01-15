@@ -13,6 +13,14 @@
   % ファイル分割のためのパッケージ
   \usepackage{subfiles}
   
+  % 参考文献管理
+\usepackage[
+	backend=biber,
+	sorting=none,
+	style=ieee
+]{biblatex}
+\addbibresource{ref.bib}
+
   % ここから -->
   \usepackage{calc,ifthen}
   \newcounter{hoge}
@@ -958,13 +966,8 @@ Gitを使用してソースコードのバージョン管理を行ったが、Gi
   
   
   %\backmatter
-  
-  \begin{thebibliography}{9}
-    \bibitem{JohoWhitepaper} 総務省, 平成28年版 情報通信白書 第1部 特集 IoT・ビッグデータ・AI～ネットワークとデータが創造する新たな価値～
-    http://www.soumu.go.jp/johotsusintokei/whitepaper/ja/h28/html/nc122530.html
-  
-    [last accessed 2017/7/24]
-  \end{thebibliography}
+
+  \printbibliography[title=参考文献]
   
   \end{document}
   
